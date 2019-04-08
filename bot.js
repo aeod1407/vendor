@@ -2,7 +2,6 @@
 const client = new Discord.Client();
 const dev = ["564414567946387487"];
 const prefix = "$";
-
 client.on('message', message => {
     var arg = message.content.split(` `).slice(1).join(' ');
       if (!dev.includes(message.author.id)) return;
