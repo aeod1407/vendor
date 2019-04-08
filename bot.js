@@ -524,8 +524,6 @@ client.on('message', msg => {
     }
   });
 
-const Discord = require('discord.js');  
-const client = new Discord.Client();  
 const aprefix ="$";
 const dev = ["564414567946387487"];
 client.on('message', message => {
