@@ -1,16 +1,57 @@
 ﻿﻿const Discord = require("discord.js");
 const client = new Discord.Client();
+const dev = ["564414567946387487"];
 const prefix = "$";
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : EX Clan`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` $help || شــوب `,"http://twitch.tv/Death Shop")
+client.on('message', message => {
+    var arg = message.content.split(` `).slice(1).join(' ');
+      if (!dev.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(aprefix + 'setg')) { 
+    client.user.setGame(arg);
+      message.channel.send(`** تـم تـغـيـر حـالـه الـى : ${arg} :red_circle:**`)
+  } else 
+  if (message.content.startsWith(aprefix + 'setw')) {
+  client.user.setActivity(arg, {type:'WATCHING'});
+      message.channel.send(`** تـم تـغـيـر حـالـه الـى : ${arg} :black_circle:**`)
+  } else 
+  if (message.content.startsWith(aprefix + 'setl')) {
+  client.user.setActivity(arg , {type:'LISTENING'});
+      message.channel.send(`** تـم تـغـيـر حـالـه الـى : ${arg} :pen_ballpoint: **`)
+  } else 
+  if (message.content.startsWith(aprefix + 'stream')){
+    client.user.setGame(arg, "https://www.twitch.tv/bot");
+      message.channel.send(`**تـم تـغـيـر حـالـه الـى : ${arg} :large_blue_circle:**`)
+  } else
+  if (message.content.startsWith(aprefix + 'setname')) { //لتغير اسم البوت 
+  client.user.setUsername(arg).then
+      message.channel.send(`** تـم تـغـيـر اسـم الـى : ${arg} :radio_button: **`)
+} else
+
+if (message.content.startsWith(aprefix + 'setavatar')) { //لتغير صورة البوت 
+  client.user.setAvatar(arg);
+    message.channel.send(`** تــم تـغـيـر صـور الـى : `` ${arg} ``:camera_with_flash:`);
+} else
+
+if (message.content.startsWith(aprefix + 'setonline')) { //لتغير حالت البوت لي  online
+client.user.setStatus("online")
+    message.channel.send(`**تــم تـغـيـر حـالـه الـى : online :white_circle:**`);
+} else
+    
+if (message.content.startsWith(aprefix + 'setdnd')) { //~~~ dnd
 client.user.setStatus("dnd")
+    message.channel.send(`**تــم تـغـيـر حـالـه الـى : dnd **`);
+} else
+    
+if (message.content.startsWith(aprefix + 'setidle')) { //~~~ idle
+client.user.setStatus("idle")
+    message.channel.send(`**تــم تـغـيـر حـالـه الـى : idle :accept:**`);
+} else
+
+if (message.content.startsWith(aprefix + 'setoffline')) { //~~~ offline
+client.user.setStatus("offline")
+    message.channel.send(`**تــم تـغـيـر حـالـه الـى : offline :o:**`);
+}
 });
 
 client.on('message', message => {
