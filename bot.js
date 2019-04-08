@@ -223,7 +223,7 @@ client.on("message",async message => {
 if(message.content === 'Bot'){//الامر
 let staff = message.guild.member(message.author).roles.find('name' ,"♶ 𝓥𝓔𝓝𝓓𝓞𝓡 𝓑𝓞𝓣");
       if(!staff) return message.reply(`** لــسه مـعاك رتـب @♶ 𝓥𝓔𝓝𝓓𝓞𝓡 𝓑𝓞𝓣  **`)
-var shopc = message.guild.channels.find("name","vendor-bot ")
+var shopc = message.guild.channels.find("name","vendor-bot")
   if(!shopc) return message.reply("**لأيـوجـد شــات بـاسـم #vendor-bot**")
     let Bot = '';
       let fillter = m => m.author.id === message.author.id
@@ -347,7 +347,7 @@ client.on("message",async message => {
 if(message.content === 'hanker'){//الامر
 let staff = message.guild.member(message.author).roles.find('name' ,"♶ 𝓥𝓔𝓝𝓓𝓞𝓡 𝓗𝓐𝓝𝓚𝓔𝓡");
       if(!staff) return message.reply(`** لـسه مـعاك رتـب @♶ 𝓥𝓔𝓝𝓓𝓞𝓡 𝓗𝓐𝓝𝓚𝓔𝓡 **`)
-var shopc = message.guild.channels.find("name","vendor-hanker ")
+var shopc = message.guild.channels.find("name","vendor-hanker")
   if(!shopc) return message.reply("** لأيـوجـد شـات بـاسـم #vendor-hanker **")
     let hanker = '';
       let fillter = m => m.author.id === message.author.id
