@@ -529,4 +529,10 @@ e.edit("**__تــم نــشــره__:white_check_mark:**").then(e => {
 }
 });
 
+client.on('message', msg => {
+    if (msg.content === '$help') {
+      msg.reply('**__تـــم رســـال اوامـــر فــى الــخـاص__** :white_check_mark:');
+    }
+  });
+
 client.login(process.env.BOT_TOKEN);
