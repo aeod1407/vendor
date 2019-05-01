@@ -5,7 +5,7 @@ const prefix = "$";
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { 
     let pages = [`**
-        ***__بـــاريــس شــوب__***
+        ***__LD SHOP__***
 **
 ╔═══════════۩۩═══════════╗
 
@@ -34,7 +34,7 @@ if (message.content.startsWith(prefix + 'help')) {
 **
   `
 ,`
-        ***__بـــاريــس شــوب__***
+        ***__LD SHOP__***
 **
 ╔═══════════۩۩═══════════╗
 
@@ -62,7 +62,7 @@ if (message.content.startsWith(prefix + 'help')) {
 ╚═══════════۩۩═══════════╝
 **
    `,`
-        ***__بـــاريــس شــوب__***
+        ***__LD SHOP__***
 **
 
 ╔═══════════۩۩═══════════╗
@@ -573,5 +573,95 @@ client.on("message", async message => {
             message.channel.sendEmbed(Ex);
     }
 });
+
+        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-accounts", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تــم نــشــاء روم الـبـائـعـيـن **")
+            }
+            })
+			
+			        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-bot", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تـم نـشـاء روم الـبـائـعـيـن **")
+            }
+            })
+			
+			        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-servers", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تـم نـشـاء روم الـبـائعـيـن **")
+            }
+            })
+			
+			        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-nitro", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تـم نـشـاء روم الـبـائعـيـن **")
+            }
+            })
+			
+			        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-hanker", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تـم نـشـاء روم الـبـائـعـيـن **")
+            }
+            })
+			
+			        client.on('message', message=>{
+            if(message.content.startsWith("$رومات")) {
+            if(!message.channel.guild) return;
+                if(message.author.bot) return;
+                if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**تحتاج الى `MANAGE_CHANNELS`**");
+                message.guild.createChannel("vendor-photoshop", "text").then(c =>{
+                    c.overwritePermissions(message.guild.id, {
+                        SEND_MESSAGES: false
+ 
+                          })
+                })
+    message.channel.send("**✅ تـم نـشـاء روم الـبـائـعـيـن **")
+            }
+            })
 
 client.login(process.env.BOT_TOKEN);
